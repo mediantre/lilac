@@ -39,8 +39,3 @@ app.register_blueprint(server_info)  # run on index route
 
 def create_app():
     return app
-
-
-if __name__ == "__main__":  # DO NOT RUN IN PRODUCTION
-    local = True if os.environ.get("ENV") == "development" else False
-    app.run(debug=True, port=5001, host="0.0.0.0")
